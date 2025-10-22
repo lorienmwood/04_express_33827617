@@ -35,3 +35,4 @@ Visit http://localhost:8000/ and the webpage will open.
 | / date             | Current time and date route 
 | / welcome:name     |'Welcome User's Name' route 
 | / chain            | A sequence route using (next)
+| / file

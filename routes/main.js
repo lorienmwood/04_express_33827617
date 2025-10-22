@@ -36,13 +36,19 @@ router.get("/welcome/:name", (req, res) => {
 // Chain Route
 router.get("/chain", (req, res, next) => {
   console.log("The First Page");
-  next(); // pass control to the next handler
+  //It passes to the next chain
+  next();
 });
 
 router.get("/chain", (req, res) => {
   console.log("The Second Page");
   res.send("<h1>The chain has worked :0</h1>");
 });
+
+// File Route
+router.get("/file", (req, res) =>
+  res.sendFile(path.join(__dirname, "public", "a.html"))
+);
 
 // Export the router object so index.js can access it
 module.exports = router;
