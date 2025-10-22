@@ -1,6 +1,7 @@
 // Create a new router
 const express = require("express");
 const router = express.Router();
+const path = require("path");
 
 // Handle the main routes
 router.get("/", (req, res) => res.send("Hello World!"));
@@ -46,9 +47,10 @@ router.get("/chain", (req, res) => {
 });
 
 // File Route
-router.get("/file", (req, res) =>
-  res.sendFile(path.join(__dirname, "public", "a.html"))
-);
+router.get("/file", (req, res) => {
+  // Path to html file through public folder
+  res.sendFile(path.join(__dirname, "../public/a.html"));
+});
 
 // Export the router object so index.js can access it
 module.exports = router;
