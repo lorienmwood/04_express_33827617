@@ -35,12 +35,13 @@ router.get("/welcome/:name", (req, res) => {
 
 // Chain Route
 router.get("/chain", (req, res, next) => {
-  console.log("Accessing the secret section ...");
+  console.log("The First Page");
   next(); // pass control to the next handler
 });
+
 router.get("/chain", (req, res) => {
-  console.log("Accessing the secret section ...");
-  res.send("<h1>Chained Route</h1>");
+  console.log("The Second Page");
+  res.send("<h1>The chain has worked :0</h1>");
 });
 
 // Export the router object so index.js can access it

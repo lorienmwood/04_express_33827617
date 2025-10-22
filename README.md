@@ -1,10 +1,10 @@
 # Express Web Application 
-A small web application built using Express.js. This project 
+A small web application built using node.js and express.js. 
 
 ## Technologies Used 
-- Express.js – for handling web requests and routes
+- Express.js – for handling web requests/routes
 - Node.js – to run the server
-- HTML – for structing the webpages 
+- HTML – for the webpages
 
 ## How to Install and Run Locally 
 
@@ -21,8 +21,7 @@ npm install
 ```
 node index.js
 ```
-4. Open the Browser 
-<br>
+4. Open the Browser \
 Visit http://localhost:8000/ and the webpage will open. 
 
 
@@ -35,4 +34,4 @@ Visit http://localhost:8000/ and the webpage will open.
 | / contact          | Contact route
 | / date             | Current time and date route 
 | / welcome:name     |'Welcome User's Name' route 
-| / chain            | 
+| / chain            | A sequence route using (next)
